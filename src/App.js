@@ -15,7 +15,7 @@ const POST_QUERY = gql`
     title
     recentupdates
     screenshot {
-      id
+      url
     }
     createdAt
   }
@@ -45,7 +45,7 @@ class App extends Component {
               <h1>{clientupdateses.title}</h1>
               <h1>{clientupdateses.recentupdates}</h1>
               <div>{clientupdateses.createdAt}</div>
-              <img src={data.clientupdateses.screenshot} alt='some value'/>
+              <img src={clientupdateses.screenshot.url} alt='some value'/>
               </div>
               
                 )
